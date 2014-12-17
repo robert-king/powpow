@@ -1,0 +1,56 @@
+
+<div>
+    <ul class="nav nav-pills pull-right" ng-if="user.isLoggedIn">
+        <li ng-if="keyboard.currentHand === 'both'">
+            <ul class="stats-menu">
+                <li><span class="label label-info">Both Hands</span></li>
+                <li ng-if="worldRank.rank">
+                    <span class="label label-success">
+                        #{{worldRank.rank.both}} in World
+                    </span>
+                </li>
+                <li><span class="label label-danger">{{user.userinfo.recordWPM.both}} WPM</span></li>
+            </ul>
+        </li>
+        <li ng-if="keyboard.currentHand === 'left'">
+            <a>
+                <img src="images/lefthand.jpg" height="75px">
+            </a>
+        </li>
+        <li ng-if="keyboard.currentHand === 'left'">
+            <ul class="stats-menu">
+                <li><span class="label label-info">Left Hand</span></li>
+                <li><span class="label label-success">#{{worldRank.rank.left}} in World</span></li>
+                <li><span class="label label-danger">{{user.userinfo.recordWPM.left}} WPM</span></li>
+            </ul>
+        </li>
+        <li ng-if="keyboard.currentHand === 'right'">
+            <a>
+                <img src="images/righthand.jpg" height="75px">
+            </a>
+        </li>
+        <li ng-if="keyboard.currentHand === 'right'">
+            <ul class="stats-menu">
+                <li><span class="label label-info">Right Hand</span></li>
+                <li><span class="label label-success">#{{worldRank.rank.right}} in World</span></li>
+                <li><span class="label label-danger">{{user.userinfo.recordWPM.right}} WPM</span></li>
+            </ul>
+        </li>
+        <li>
+            <ul class="stats-menu">
+                <!--<li>-->
+                    <!--<a ng-click="openConfig()" style="cursor: pointer">-->
+                        <!--<img src="data:image/jpeg;base64,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" height="75px">-->
+                    <!--</a>-->
+                <!--</li>-->
+                <li class="move-up">
+                    <div class="circular" ng-style="{'background': 'url(' + user.pic + ') no-repeat'}">
+                    </div>
+                </li>
+                <li class="move-up-more"><span class="label label-info">{{user.displayName}}</span></li>
+
+            </ul>
+        </li>
+    </ul>
+    <img src="images/powopow-small.png" height="100px">
+</div>

@@ -1,0 +1,4 @@
+corpus
+bigrams, trigrams
+language model SRI (Sphinx uses it)
+

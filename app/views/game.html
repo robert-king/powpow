@@ -1,0 +1,26 @@
+<img src="images/powpow-preloader.gif" ng-if="!ready">
+<canvas ng-if="user.isLoggedIn && false"
+        id="line"
+        height="70"
+        class="chart chart-line"
+        data="chart.data"
+        labels="chart.labels"
+        click="chart.onClick"
+        options="chart.options"
+        style="background: white">
+</canvas>
+<h2>{{wpm}} WPM</h2>
+<p>
+    <input
+            ng-model="userInput.text"
+            ng-change="matchWord()"
+            ng-trim="false"
+            style="width: 100%"
+            autofocus>
+</p>
+<div>
+    <button ng-repeat="word in words" class="btn btn-info" style="width: 190px">
+        <span style="color: red">{{word[0]}}</span>
+        <span>{{word[1]}}</span>
+    </button>
+</div>

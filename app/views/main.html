@@ -1,0 +1,21 @@
+<div ng-include="'views/header.html'"></div>
+<div
+        class="jumbotron"
+        ng-class="{green: !!recentWord}"
+        style="padding-top: 15px; padding-bottom: 15px">
+
+    <!--{{user}}-->
+
+    <button class="btn btn-primary"
+            ng-if="!user.isLoggedIn"
+            ng-click="login()">
+        Login (required)
+    </button>
+    <!--{{data}}-->
+    <div ng-include="'views/config.html'" ng-show="configOpen"></div>
+    <div ng-include="'views/game.html'"
+         ng-hide="configOpen"
+         ng-controller="GameCtrl"></div>
+    <div ng-include="'views/footer.html'" ng-hide="configOpen" class="footer"></div>
+</div>
+
